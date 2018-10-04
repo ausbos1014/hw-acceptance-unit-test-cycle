@@ -23,7 +23,7 @@ module NavigationHelpers
       movie_path Movie.find_by_title($1)
 
     when /^the Similar Movies page for "(.*)"$/
-      same_director_path Movie.find_by_title($1)
+      search_director_path Movie.find_by_title($1)
 
     when /^the (RottenPotatoes)?home\s?page$/ then '/movies' 
       
