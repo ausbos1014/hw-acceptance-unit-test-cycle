@@ -24,7 +24,9 @@ module NavigationHelpers
 
     when /^the Similar Movies page for "(.*)"$/
       search_director_path(Movie.where("title = ?", $1).first)
-
+      
+    when /^the Create New Movie page/
+      '/movies/new'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
