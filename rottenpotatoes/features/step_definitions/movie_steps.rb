@@ -8,6 +8,10 @@ Then(/^the director of "(.*?)" should be "(.*?)"$/) do |title, director|
     expect(Movie.find_by_title(title).director).to eq director
 end
 
+When(/^I select checkbox "(.*?)"$/) do |cb|
+  check(cb)
+end
+
 #Then(/^the director of "(.*)" should be "(.*)"$/) do |title, director_of_movie|
 #    step %Q{I should see "#{title_of_movie}"}
 #    step %Q{I should see "#{director_of_movie}"}

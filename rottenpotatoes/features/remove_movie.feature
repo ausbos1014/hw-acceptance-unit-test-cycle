@@ -1,4 +1,4 @@
-Feature: create new movie
+Feature: remove movie
  
   As a movie buff
   So that I can express disdain for movies I don't like
