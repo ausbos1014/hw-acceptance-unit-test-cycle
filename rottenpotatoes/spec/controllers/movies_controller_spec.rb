@@ -14,4 +14,10 @@ describe MoviesController do
             expect(response).to render_template(:search_director)
         end
     end
+        
+    describe "creation of new movie" do
+        it "should add a new movie to the list" do
+            expect { post :create, :movie => {:title => "Title", :release_date => "Release Date", :rating => "Rating"}}.to change(Movie, :count).by(1)
+        end
+    end
 end
